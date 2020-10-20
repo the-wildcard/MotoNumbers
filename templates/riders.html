@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Riders
+{% endblock %}
+
+{% block main %}
+
+    {% for rider in riders %}
+    <a href="/riders/{{rider[2]}}">{{rider[1]}} {{rider[0]}} </a> <br>
+    {% endfor %}
+
+    <select name="riderchoice" id="riderchoice">
+        {% for rider in riders %}
+            <option value={{rider[0]}}>{{rider[0]}} {{rider[1]}}</option> 
+        {% endfor %}
+    </select>
+
+    <br><br><br>
+    
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Session Details
+{% endblock %}
+
+{% block main %}
+
+    <table>
+        <tr>
+            <th>Position</th>
+            <th>Name</th>
+            <th>Best Lap Time</th>
+        </tr>
+        {% for row in SessionDetails %}
+            <tr>
+                {% for i in range(row|length) %}
+                    <td>{{row[i]}}</td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+
+{% endblock %}

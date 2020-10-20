@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Rider Details
+{% endblock %}
+
+{% block main %}
+
+<h2>{{RiderDetails[0][(RiderDetails[0]|length)-1]}} Race Results</h2>
+<br>
+    <table>
+        <th>Event</th>
+        <th>Session</th>
+        <th>Position</th>
+        <th>Status</th>
+        <th>Laps Completed</th>
+        {% for row in RiderDetails %}
+        <tr>
+            {% for item in range((row|length) - 1) %}    
+                <td>{{row[item]}}</td>
+            {% endfor %}
+        </tr> 
+        {% endfor %}
+    </table>
+
+{% endblock %}

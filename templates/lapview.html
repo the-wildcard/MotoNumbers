@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Laps
+{% endblock %}
+
+{% block main %}
+        {% for lap in laps %}
+        {{lap}} <br>
+        {% endfor %}
+
+{% endblock %}

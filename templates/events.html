@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Events
+{% endblock %}
+
+{% block main %}
+
+{% for event in events %}
+<a href="/events/{{event[1]}}" style="margin:auto;" >{{event[2]}}</a> <br>
+{% endfor %}
+
+    
+
+{% endblock %}
